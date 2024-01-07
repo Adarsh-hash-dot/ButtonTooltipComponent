@@ -1,3 +1,96 @@
-.error {
-    background-color: red;
+.tooltipContainer {
+  position: relative;
+}
+
+.tooltip {
+  padding-bottom: 3px;
+  border-bottom-width: 2.1px;
+  border-bottom-style: dotted;
+  font-size: 25px !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* tooltip info */
+.tooltipInfo {
+  font-size: 18px !important;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+}
+
+/* tooltip position */
+.top {
+  top: -72px;
+}
+
+.left {
+  top: 0px;
+  left: -192px;
+}
+
+.bottom {
+  bottom: -72px;
+}
+
+.right {
+  top: 0px;
+  right: -192px;
+}
+
+/* tooltip hover effect */
+.tooltip:hover + .tooltipInfo {
+  display: block;
+}
+
+/* arrow */
+.tooltipInfo::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+  transform: translateX(-50%);
+}
+
+.tooltipInfo.right::before {
+  top: 32%;
+  left: -5%;
+  transform: rotate(-87deg);
+}
+
+.tooltipInfo.bottom::before {
+  top: -15%;
+  left: 50%;
+}
+
+.tooltipInfo.left::before {
+  top: 36%;
+  left: 100%;
+  transform: rotate(88deg);
+}
+
+.tooltipInfo.top::before {
+  transform: rotate(180deg);
+}
+
+/* appearing Animation */
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 0.3s ease-in-out forwards;
+}
+
+/* Define the keyframes for the fadeInAnimation */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

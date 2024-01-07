@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       Select position for tooltip:
+      {/* Location buttons */}
       {location.map((loc) => (
         <button key={loc} onClick={handleClick} className={`button ${loc === currLocation ? "active" : ""}`}>
           {loc}
