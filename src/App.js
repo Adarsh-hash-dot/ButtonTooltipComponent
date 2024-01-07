@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { Tooltip } from "./components";
 
 function App() {
+  const location = ["top", "right", "bottom", "left"];
+  const [currLocation, setCurrentLocation] = useState("top");
+
+  const handleClick = (e) => {
+    setCurrentLocation(e.target.innerText);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Select position for tooltip:
+      {location.map((loc) => (
+        <button key={loc} onClick={handleClick} className={`button ${loc === currLocation ? "active" : ""}`}>
+          {loc}
+        </button>
+      ))}
+
+      <div className="tooltip-container">
+        <Tooltip currLocation={currLocation} />
+      </div>
     </div>
   );
 }
