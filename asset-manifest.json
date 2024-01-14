@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/tooltip/static/css/main.6e240cc8.css",
-    "main.js": "/tooltip/static/js/main.7aa9f5a4.js",
-    "index.html": "/tooltip/index.html",
-    "main.6e240cc8.css.map": "/tooltip/static/css/main.6e240cc8.css.map",
-    "main.7aa9f5a4.js.map": "/tooltip/static/js/main.7aa9f5a4.js.map"
+    "main.css": "/button-tooltip/static/css/main.6e240cc8.css",
+    "main.js": "/button-tooltip/static/js/main.7aa9f5a4.js",
+    "index.html": "/button-tooltip/index.html",
+    "main.6e240cc8.css.map": "/button-tooltip/static/css/main.6e240cc8.css.map",
+    "main.7aa9f5a4.js.map": "/button-tooltip/static/js/main.7aa9f5a4.js.map"
   },
   "entrypoints": [
     "static/css/main.6e240cc8.css",
